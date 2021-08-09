@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,400;0,500;1,400&display=swap');
+
+.navColor {
+  background-image: linear-gradient(15deg, #24094f 20%, #5733d0 100%);
+  color: #fff;
+}
+#nav-item .nav-link {
+  color: rgb(250, 250, 3);
+  margin-left: 10px;
+}
+#nav-item :hover {
+  color: rgb(19, 248, 19);
+}
+body {
+  font-family: 'Prompt', sans-serif;
+  background-color: #1d1b1b;
+  color: #fff;
+}
