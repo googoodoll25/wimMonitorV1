@@ -16,3 +16,64 @@ body {
   background-color: #1d1b1b;
   color: #fff;
 }
+.container-fluid {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+.card {
+  border: 1px solid #fff;
+}
+
+.card-body {
+  background-color: #1d1b1b;
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+.table thead th {
+  font-size: 10px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.led-green {
+  margin: 5px auto;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(31, 255, 1);
+  border-radius: 50%;
+  box-shadow: #000 0 -1px 7px 1px, inset rgb(140, 253, 48) 0 -1px 9px,
+    rgb(38, 255, 0) 0 2px 12px;
+}
+.led-red {
+  margin: 5px auto;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(253, 21, 21);
+  border-radius: 50%;
+  box-shadow: #000 0 -1px 7px 1px, inset rgb(255, 25, 25) 0 -1px 9px,
+    rgb(255, 23, 23) 0 2px 12px;
+}
+
+code {
+  color: rgb(255, 53, 94);
+  margin-left: 20px;
+}
+/* .led-yellow {
+  margin: 5px auto;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(255, 238, 1);
+  border-radius: 50%;
+  box-shadow: #000 0 -1px 7px 1px, inset rgb(251, 248, 31) 0 -1px 9px,
+    rgb(251, 255, 21) 0 2px 12px;
+} */
+.led-blue {
+  margin: 5px auto;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(1, 5, 255);
+  border-radius: 50%;
+  box-shadow: #000 0 -1px 7px 1px, inset rgb(48, 68, 253) 0 -1px 9px,
+    rgb(45, 30, 255) 0 2px 12px;
+}

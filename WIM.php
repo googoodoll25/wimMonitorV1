@@ -31,9 +31,40 @@
   </div>
 </nav>
 
+<div class="container-fluid mt-4">
+    <h3>WIM</h3>
 
-<script src="Source/Bootstrap/jquery.min.js" crossorigin="anonymous"></script>
-<script src="Source/Bootstrap/popper.min.js" crossorigin="anonymous"></script>
-<script src="Source/Bootstrap/bootstrap.min.js" crossorigin="anonymous"></script>
+    <div id="bunphot"></div>
+       
+
+    
+</div>
+<!-- Container -->
+
+<script type="text/javascript" src="Source/Bootstrap/jquery.js" ></script>
+<script type="text/javascript" src="Source/Bootstrap/popper.min.js" ></script>
+<script type="text/javascript" src="Source/Bootstrap/bootstrap.min.js" ></script>
+<script type="text/javascript" src="Source/Bootstrap/jquery.easing.min.js"></script>
+<script type="text/javascript" src="Source/Bootstrap/bootstrap.bundle.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){    
+        
+        bunphot();
+        
+  
+    });
+    
+    function bunphot(){
+        $('#bunphot').load('WIM/bunphot.php', function(){
+           setTimeout(bunphot, 10000);
+        });
+    }
+    
+
+  
+</script>
+
+
 </body>
 </html>
