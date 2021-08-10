@@ -119,23 +119,41 @@ if(strrpos($exe, "100% loss") > 0){
         $stmt_Lane2 = $connection->query($sql_Lane2);
         $rowWim2 = $stmt_Lane2->fetch(PDO::FETCH_ASSOC);
 
+#===================== Data Lane 1 ==========================
         $timeNow =  time();
 
         $cut_time1 = substr($rowWim1['wTime'], 0, -5);
         $convert1 = strtotime($cut_time1);
 
-        echo $timeNow .'/'. $convert1;
-        
+        $diff_time1 = ($timeNow - $convert1)/55;
+        echo $diff_time1;
 
-        // $timeDiff1 = $convert1->diff($timeNow);
-        //  echo $timeDiff1;
+ #===================== Data Lane 2 ==========================
+        $cut_time2 = substr($rowWim2['wTime'], 0, -5);
+        $convert2 = strtotime($cut_time2);
 
+        $diff_time2 = ($timeNow - $convert2)/55;
+        echo $diff_time2;
+
+#===================== Diff Date Time ==========================
         $dateNow = date('m/d/Y');
         if($dateNow != $rowWim1['wDate']){
             $statusData1 = 'blue';
         }else{
-            $statusData1 = 'green';
+            if($diff_time1 > 5){
+                $statusData1 = 'blue';
+            }else{
+                $statusData1 = 'green';
+            }
+            if($diff_time2 > 5){
+                $statusData2 = 'blue';
+            }else{
+                $statusData2 = 'green';
+            } 
         }
+#===================== End Diff Date Time ==========================
+
+
 
         echo '
         <div class="card">     
@@ -178,7 +196,7 @@ if(strrpos($exe, "100% loss") > 0){
                                    <p class="led-'.$statusData1.'"></p>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                       <p class="led-'.$statusData2.'"></p>
                                    </td>
                                    <td>
                                        <p class="led-red"></p>
