@@ -21,14 +21,17 @@ body {
   padding-right: 3%;
 }
 .card {
-  border: 1px solid #fff;
+  /* border: 1px solid rgb(54, 241, 21); */
+  border: none;
+  border-radius: 15px;
 }
 
 .card-body {
   background-color: #1d1b1b;
-  border-bottom: 1px solid #fff;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
+  border: 1px solid #fff;
+  border-radius: 15px;
+
+  height: 135px;
 }
 .table thead th {
   font-size: 10px;
@@ -76,4 +79,10 @@ code {
   border-radius: 50%;
   box-shadow: #000 0 -1px 7px 1px, inset rgb(48, 68, 253) 0 -1px 9px,
     rgb(45, 30, 255) 0 2px 12px;
+}
+.button_relay {
+  background-color: #6c007a;
+  border-color: #6c007a;
+  height: 25px;
+  font-size: 12px;
 }

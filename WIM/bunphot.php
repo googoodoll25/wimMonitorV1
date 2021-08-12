@@ -86,7 +86,7 @@ if(strrpos($exe, "100% loss") > 0){
                                        <p class="led-red"></p>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                       
                                    </td>
                                </tr>
                            </tbody>
@@ -124,28 +124,25 @@ if(strrpos($exe, "100% loss") > 0){
 
         $cut_time1 = substr($rowWim1['wTime'], 0, -5);
         $convert1 = strtotime($cut_time1);
-
         $diff_time1 = ($timeNow - $convert1)/55;
-        echo $diff_time1;
 
  #===================== Data Lane 2 ==========================
         $cut_time2 = substr($rowWim2['wTime'], 0, -5);
         $convert2 = strtotime($cut_time2);
 
         $diff_time2 = ($timeNow - $convert2)/55;
-        echo $diff_time2;
 
 #===================== Diff Date Time ==========================
         $dateNow = date('m/d/Y');
         if($dateNow != $rowWim1['wDate']){
             $statusData1 = 'blue';
         }else{
-            if($diff_time1 > 5){
+            if($diff_time1 > 60){
                 $statusData1 = 'blue';
             }else{
                 $statusData1 = 'green';
             }
-            if($diff_time2 > 5){
+            if($diff_time2 > 60){
                 $statusData2 = 'blue';
             }else{
                 $statusData2 = 'green';
@@ -153,24 +150,28 @@ if(strrpos($exe, "100% loss") > 0){
         }
 #===================== End Diff Date Time ==========================
 
-
+        include('../condition.php');
 
         echo '
         <div class="card">     
            <div class="card-body">
-           <div class="row">
+           <div class="row" style="margin-top:-10px;">
                    <div class="col-md-12">
             <!--========================================================-->
-                   บรรพตพิสัย <code><b>Anydesk ID : 743115036 </b></code>
+                 <a style="color:#FFF" href="http://159.192.121.230:8080/dashboard"  target="_blank">  
+                 บรรพตพิสัย  
+                 </a>
+                 <code><b>Anydesk ID : 743115036 </b></code>
             <!--========================================================-->
-                   </div>
+            
+                </div>
                    
                </div>
                <div class="row">
                    <div class="col-md-12">
                        <div class="table-responsive">
                        
-                       <table class="table table-sm  table-bordered ">
+                       <table class="table table-sm  table-bordered table-display">
                            <thead>
                                <tr>
                                    <th>Data#1</th>
@@ -199,43 +200,45 @@ if(strrpos($exe, "100% loss") > 0){
                                        <p class="led-'.$statusData2.'"></p>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                       <p class="led-'.$server.'"></p>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                       <p class="led-'.$db.'"></p>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                       <p class="led-'.$wim1.'"></p>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                       <p class="led-'.$wim2.'"></p>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                       <p class="led-'.$ras1.'"></p>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                       <p class="led-'.$ras2.'"></p>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                       <p class="led-'.$over1.'"></p>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                       <p class="led-'.$over2.'"></p>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                       <p class="led-'.$lpr1.'"></p>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                       <p class="led-'.$lpr2.'"></p>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                       <p class="led-'.$relay1.'"></p>
+                                       <button class="btn btn-success btn-sm btn-block button_relay" data-toggle="modal" data-target="#relay_bunphot1" style="'.$display1.'">Reset</button>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                       <p class="led-'.$relay2.'"></p>
+                                       <button class="btn btn-success btn-sm btn-block button_relay" data-toggle="modal" data-target="#relay_bunphot2" style="'.$display2.'">Reset</button>
                                    </td>
                                    <td>
-                                       <p class="led-red"></p>
+                                           
                                    </td>
                                </tr>
                            </tbody>
@@ -245,8 +248,7 @@ if(strrpos($exe, "100% loss") > 0){
                </div>
            </div>
        </div>
-        
-        
+          
         ';
         
 
@@ -262,62 +264,3 @@ if(strrpos($exe, "100% loss") > 0){
 
 ?>
 
- <!-- <div class="card">
-           
-           <div class="card-body">
-           <div class="row">
-                   <div class="col-md-6">
-                   บรรพตพิสัย <code><b>Anydesk ID : </b></code>
-                   </div>
-                   <div class="col-md-3">
-                       <small>Data Lane#1 :</small>
-                   </div>
-                   <div class="col-md-3">
-                       <small>Data Lane#2 :</small>
-                   </div>
-
-               </div>
-               <div class="row">
-                   <div class="col-md-12">
-                       <div class="table-responsive">
-
-                       
-                       <table class="table table-sm  table-bordered ">
-                           <thead>
-                               <tr>
-                                   <th>Data#1</th>
-                                   <th>Data#2</th>
-                                   <th>Server#1</th>
-                                   <th>Server#2</th>
-                                   <th>WIM#1</th>
-                                   <th>WIM#2</th>
-                                   <th>Loop#1</th>
-                                   <th>Loop#2</th>
-                                   <th>Over#1</th>
-                                   <th>Over#2</th>
-                                   <th>LPR#1</th>
-                                   <th>LPR#2</th>
-                                   <th>Relay#1</th>
-                                   <th>Relay#2</th>
-                                   <th>Relay#3</th>
-                               </tr>
-                           </thead>
-                           <tbody>
-                               <tr>
-                                   <td>
-                                   <p class="led-green"></p>
-                                   </td>
-                                   <td>
-                                       <p class="led-red"></p>
-                                   </td>
-                                   <td>
-                                       <p class="led-blue"></p>
-                                   </td>
-                               </tr>
-                           </tbody>
-                       </table>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div> -->
