@@ -108,48 +108,49 @@ if(strrpos($exe, "100% loss") > 0){
         $connection->exec("set names utf8");
         $_SESSION['db_result'] = 'Connect';
         // echo "Connect";
+  // ================ Tack WIM =====================
+  $sql_Lane1  = "select top 1 time,date from [dbo].[tbt_loop] WHERE lane = 1 ORDER BY id Desc";
+  $stmt_Lane1 = $connection->query($sql_Lane1);
+  $rowWim1 = $stmt_Lane1->fetch(PDO::FETCH_ASSOC);
 
-        $sql_Lane1  = "select top 1 wTime,wDate from [dbo].[tbt_1_WimSensor_IND9W] WHERE Lane = 1 ORDER BY WimSensor_ID Desc";
-        $stmt_Lane1 = $connection->query($sql_Lane1);
-        $rowWim1 = $stmt_Lane1->fetch(PDO::FETCH_ASSOC);
-      
-        $sql_Lane2  = "select top 1 wTime,wDate from [dbo].[tbt_1_WimSensor_IND9W] WHERE Lane = 2 ORDER BY WimSensor_ID Desc";
-        $stmt_Lane2 = $connection->query($sql_Lane2);
-        $rowWim2 = $stmt_Lane2->fetch(PDO::FETCH_ASSOC);
+  $sql_Lane2  = "select top 1 time,date from [dbo].[tbt_loop] WHERE lane = 2 ORDER BY id Desc";
+  $stmt_Lane2 = $connection->query($sql_Lane2);
+  $rowWim2 = $stmt_Lane2->fetch(PDO::FETCH_ASSOC);
 
 #===================== Data Lane 1 ==========================
-        $timeNow =  time();
+  $timeNow =  time();
 
-        $cut_time1 = substr($rowWim1['wTime'], 0, -5);
-        $convert1 = strtotime($cut_time1);
-        $diff_time1 = ($timeNow - $convert1)/55;
+  $cut_time1 = substr($rowWim1['time'], 0, -5);
+  $convert1 = strtotime($cut_time1);
+  $diff_time1 = ($timeNow - $convert1)/54;
+  
+#===================== Data Lane 2 ==========================
+  $cut_time2 = substr($rowWim2['time'], 0, -5);
+  $convert2 = strtotime($cut_time2);
 
- #===================== Data Lane 2 ==========================
-        $cut_time2 = substr($rowWim2['wTime'], 0, -5);
-        $convert2 = strtotime($cut_time2);
-
-        $diff_time2 = ($timeNow - $convert2)/55;
-
+  $diff_time2 = ($timeNow - $convert2)/54;
+  
 #===================== Diff Date Time ==========================
-        $dateNow = date('m/d/Y');
-        if($dateNow != $rowWim1['wDate']){
-            $statusData1 = 'blue';
-        }else{
-            if($diff_time1 > 60){
-                $statusData1 = 'blue';
-            }else{
-                $statusData1 = 'green';
-            }          
-        }
-        if($dateNow != $rowWim2['wDate']){
-            $statusData2 = 'blue';
-        }else{
-            if($diff_time2 > 60){
-                $statusData2 = 'blue';
-            }else{
-                $statusData2 = 'green';
-            }
-        }
+  $dateNow = date('m/d/Y');
+  
+  if($dateNow != $rowWim1['date']){
+      $statusData1 = 'blue';
+  }else{
+      if($diff_time1 > 60){
+          $statusData1 = 'blue';
+      }else{
+          $statusData1 = 'green';
+      }          
+  }
+  if($dateNow != $rowWim2['date']){
+      $statusData2 = 'blue';
+  }else{
+      if($diff_time2 > 60){
+          $statusData2 = 'blue';
+      }else{
+          $statusData2 = 'green';
+      }
+  }
 
 
 #===================== End Diff Date Time ==========================

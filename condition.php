@@ -68,5 +68,12 @@ if($row['relay2'] != 'ON'){
    $relay2 = 'green';
    $display2 = null;
 }
+if($row['relay3'] != 'ON'){
+   $relay3 = 'red';
+   $display3 = 'display:none';
+}else{
+  $relay3 = 'green';
+  $display3 = null;
+}
 
 ?>
