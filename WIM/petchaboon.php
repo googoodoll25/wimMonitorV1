@@ -1,5 +1,5 @@
 <?php
-$ip = "159.192.121.230";
+$ip = "103.10.231.129";
 try{
     $exe= shell_exec("ping -n 1 $ip");
 }catch (Exception $e){
@@ -12,7 +12,7 @@ if(strrpos($exe, "100% loss") > 0){
            <div class="row">
                    <div class="col-md-12">
             <!--========================================================-->
-                   บรรพตพิสัย <code><b>OFFLINE</b></code>
+                   เพชรบูรณ์ <code><b>OFFLINE</b></code>
                    </div>
                    
                </div>
@@ -27,7 +27,7 @@ if(strrpos($exe, "100% loss") > 0){
                                    <th>Data1</th>
                                    <th>Data2</th>
                                    <th>Server1</th>
-                                   <th>Server2</th>
+                                  
                                    <th>WIM1</th>
                                    <th>WIM2</th>
                                    <th>Loop1</th>
@@ -52,9 +52,7 @@ if(strrpos($exe, "100% loss") > 0){
                                    <td>
                                        <p class="led-red"></p>
                                    </td>
-                                   <td>
-                                       <p class="led-red"></p>
-                                   </td>
+                                  
                                    <td>
                                        <p class="led-red"></p>
                                    </td>
@@ -100,7 +98,7 @@ if(strrpos($exe, "100% loss") > 0){
 }else{
     //===========================================================================
     try{
-        $serverName = '159.192.121.230';
+        $serverName = '103.10.231.129';
         $dbName     = 'db_wim';
         $userName       = 'mettler';
         $userPassword   = 'p@ssw0rd';
@@ -164,10 +162,10 @@ if(strrpos($exe, "100% loss") > 0){
            <div class="row" style="margin-top:-10px;">
                    <div class="col-md-12">
             <!--========================================================-->
-                 <a style="color:#FFF" href="http://159.192.121.230:8080/dashboard"  target="_blank">  
-                 บรรพตพิสัย  
+                 <a style="color:#FFF" href="http://103.10.231.129:8080/dashboard"  target="_blank">  
+                 เพชรบูรณ์  
                  </a>
-                 <code><b>Anydesk ID : 743115036 </b></code>
+                 <code><b>Anydesk ID : 286845950 </b></code>
             <!--========================================================-->
             
                 </div>
@@ -183,7 +181,7 @@ if(strrpos($exe, "100% loss") > 0){
                                    <th>Data1</th>
                                    <th>Data2</th>
                                    <th>Server1</th>
-                                   <th>Server2</th>
+                                  
                                    <th>WIM1</th>
                                    <th>WIM2</th>
                                    <th>Loop1</th>
@@ -208,9 +206,7 @@ if(strrpos($exe, "100% loss") > 0){
                                    <td>
                                        <p class="led-'.$server.'"></p>
                                    </td>
-                                   <td>
-                                       <p class="led-'.$db.'"></p>
-                                   </td>
+                                  
                                    <td>
                                        <p class="led-'.$wim1.'"></p>
                                    </td>
@@ -237,11 +233,11 @@ if(strrpos($exe, "100% loss") > 0){
                                    </td>
                                    <td>
                                        <p class="led-'.$relay1.'"></p>
-                                       <button class="btn btn-success btn-sm btn-block button_relay" data-toggle="modal" data-target="#relay_bunphot1" style="'.$display1.'">Reset</button>
+                                       <button class="btn btn-success btn-sm btn-block button_relay" data-toggle="modal" data-target="#Petchaboon1" style="'.$display1.'">Reset</button>
                                    </td>
                                    <td>
                                        <p class="led-'.$relay2.'"></p>
-                                       <button class="btn btn-success btn-sm btn-block button_relay" data-toggle="modal" data-target="#relay_bunphot2" style="'.$display2.'">Reset</button>
+                                       <button class="btn btn-success btn-sm btn-block button_relay" data-toggle="modal" data-target="#Petchaboon2" style="'.$display2.'">Reset</button>
                                    </td>
                                    <td>
                                            
@@ -265,7 +261,7 @@ if(strrpos($exe, "100% loss") > 0){
                <div class="row">
                        <div class="col-md-12">
                 <!--========================================================-->
-                       บรรพตพิสัย <code><b>OFFLINE</b></code>
+                       เพชรบูรณ์ <code><b>OFFLINE</b></code>
                        </div>
                        
                    </div>
@@ -280,7 +276,7 @@ if(strrpos($exe, "100% loss") > 0){
                                        <th>Data1</th>
                                        <th>Data2</th>
                                        <th>Server1</th>
-                                       <th>Server2</th>
+                                      
                                        <th>WIM1</th>
                                        <th>WIM2</th>
                                        <th>Loop1</th>
@@ -302,9 +298,7 @@ if(strrpos($exe, "100% loss") > 0){
                                        <td>
                                            <p class="led-red"></p>
                                        </td>
-                                       <td>
-                                           <p class="led-red"></p>
-                                       </td>
+                                      
                                        <td>
                                            <p class="led-red"></p>
                                        </td>

@@ -1,5 +1,5 @@
 <?php
-$ip = "159.192.121.230";
+$ip = "103.10.228.140";
 try{
     $exe= shell_exec("ping -n 1 $ip");
 }catch (Exception $e){
@@ -12,7 +12,7 @@ if(strrpos($exe, "100% loss") > 0){
            <div class="row">
                    <div class="col-md-12">
             <!--========================================================-->
-                   บรรพตพิสัย <code><b>OFFLINE</b></code>
+                   ท่าแซะ <code><b>OFFLINE</b></code>
                    </div>
                    
                </div>
@@ -27,7 +27,7 @@ if(strrpos($exe, "100% loss") > 0){
                                    <th>Data1</th>
                                    <th>Data2</th>
                                    <th>Server1</th>
-                                   <th>Server2</th>
+                                  
                                    <th>WIM1</th>
                                    <th>WIM2</th>
                                    <th>Loop1</th>
@@ -46,9 +46,7 @@ if(strrpos($exe, "100% loss") > 0){
                                    <td>
                                    <p class="led-red"></p>
                                    </td>
-                                   <td>
-                                       <p class="led-red"></p>
-                                   </td>
+                                  
                                    <td>
                                        <p class="led-red"></p>
                                    </td>
@@ -100,7 +98,7 @@ if(strrpos($exe, "100% loss") > 0){
 }else{
     //===========================================================================
     try{
-        $serverName = '159.192.121.230';
+        $serverName = '103.10.228.140';
         $dbName     = 'db_wim';
         $userName       = 'mettler';
         $userPassword   = 'p@ssw0rd';
@@ -152,8 +150,6 @@ if(strrpos($exe, "100% loss") > 0){
                 $statusData2 = 'green';
             }
         }
-
-
 #===================== End Diff Date Time ==========================
 
         include('../condition.php');
@@ -164,10 +160,10 @@ if(strrpos($exe, "100% loss") > 0){
            <div class="row" style="margin-top:-10px;">
                    <div class="col-md-12">
             <!--========================================================-->
-                 <a style="color:#FFF" href="http://159.192.121.230:8080/dashboard"  target="_blank">  
-                 บรรพตพิสัย  
+                 <a style="color:#FFF" href="http://103.10.228.140:8080/dashboard"  target="_blank">  
+                 ท่าแซะ 
                  </a>
-                 <code><b>Anydesk ID : 743115036 </b></code>
+                 <code><b>Anydesk ID : 345090686 </b></code>
             <!--========================================================-->
             
                 </div>
@@ -237,11 +233,11 @@ if(strrpos($exe, "100% loss") > 0){
                                    </td>
                                    <td>
                                        <p class="led-'.$relay1.'"></p>
-                                       <button class="btn btn-success btn-sm btn-block button_relay" data-toggle="modal" data-target="#relay_bunphot1" style="'.$display1.'">Reset</button>
+                                       <button class="btn btn-success btn-sm btn-block button_relay" data-toggle="modal" data-target="#thasae1" style="'.$display1.'">Reset</button>
                                    </td>
                                    <td>
                                        <p class="led-'.$relay2.'"></p>
-                                       <button class="btn btn-success btn-sm btn-block button_relay" data-toggle="modal" data-target="#relay_bunphot2" style="'.$display2.'">Reset</button>
+                                       <button class="btn btn-success btn-sm btn-block button_relay" data-toggle="modal" data-target="#thasae2" style="'.$display2.'">Reset</button>
                                    </td>
                                    <td>
                                            
@@ -257,104 +253,102 @@ if(strrpos($exe, "100% loss") > 0){
           
         ';
         
-        // ============== Connect DB Server ไม่ได้ ==================
-    }catch (Exception $e){
+
+    }
+    // =================== Connect DB ไม่ได้ =====================
+    catch (Exception $e){
         echo '
         <div class="card">     
-               <div class="card-body">
-               <div class="row">
-                       <div class="col-md-12">
-                <!--========================================================-->
-                       บรรพตพิสัย <code><b>OFFLINE</b></code>
-                       </div>
-                       
-                   </div>
-                   <div class="row">
-                       <div class="col-md-12">
-                           <div class="table-responsive">
-    
-                           
-                           <table class="table table-sm  table-bordered ">
-                               <thead>
-                                   <tr>
-                                       <th>Data1</th>
-                                       <th>Data2</th>
-                                       <th>Server1</th>
-                                       <th>Server2</th>
-                                       <th>WIM1</th>
-                                       <th>WIM2</th>
-                                       <th>Loop1</th>
-                                       <th>Loop2</th>
-                                       <th>Over1</th>
-                                       <th>Over2</th>
-                                       <th>LPR1</th>
-                                       <th>LPR2</th>
-                                       <th>Relay1</th>
-                                       <th>Relay2</th>
-                                       <th>Relay3</th>
-                                   </tr>
-                               </thead>
-                               <tbody>
-                                   <tr>
-                                       <td>
-                                       <p class="led-red"></p>
-                                       </td>
-                                       <td>
-                                           <p class="led-red"></p>
-                                       </td>
-                                       <td>
-                                           <p class="led-red"></p>
-                                       </td>
-                                       <td>
-                                           <p class="led-red"></p>
-                                       </td>
-                                       <td>
-                                           <p class="led-red"></p>
-                                       </td>
-                                       <td>
-                                           <p class="led-red"></p>
-                                       </td>
-                                       <td>
-                                           <p class="led-red"></p>
-                                       </td>
-                                       <td>
-                                           <p class="led-red"></p>
-                                       </td>
-                                       <td>
-                                           <p class="led-red"></p>
-                                       </td>
-                                       <td>
-                                           <p class="led-red"></p>
-                                       </td>
-                                       <td>
-                                           <p class="led-red"></p>
-                                       </td>
-                                       <td>
-                                           <p class="led-red"></p>
-                                       </td>
-                                       <td>
-                                           <p class="led-red"></p>
-                                       </td>
-                                       <td>
-                                           <p class="led-red"></p>
-                                       </td>
-                                       <td>
-                                           
-                                       </td>
-                                   </tr>
-                               </tbody>
-                           </table>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
+        <div class="card-body">
+        <div class="row">
+                <div class="col-md-12">
+         <!--========================================================-->
+                ท่าแซะ <code><b>OFFLINE</b></code>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+
+                    
+                    <table class="table table-sm  table-bordered ">
+                        <thead>
+                            <tr>
+                                <th>Data1</th>
+                                <th>Data2</th>
+                                <th>Server1</th>
+                               
+                                <th>WIM1</th>
+                                <th>WIM2</th>
+                                <th>Loop1</th>
+                                <th>Loop2</th>
+                                <th>Over1</th>
+                                <th>Over2</th>
+                                <th>LPR1</th>
+                                <th>LPR2</th>
+                                <th>Relay1</th>
+                                <th>Relay2</th>
+                                <th>Relay3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                <p class="led-red"></p>
+                                </td>
+                               
+                                <td>
+                                    <p class="led-red"></p>
+                                </td>
+                                <td>
+                                    <p class="led-red"></p>
+                                </td>
+                                <td>
+                                    <p class="led-red"></p>
+                                </td>
+                                <td>
+                                    <p class="led-red"></p>
+                                </td>
+                                <td>
+                                    <p class="led-red"></p>
+                                </td>
+                                <td>
+                                    <p class="led-red"></p>
+                                </td>
+                                <td>
+                                    <p class="led-red"></p>
+                                </td>
+                                <td>
+                                    <p class="led-red"></p>
+                                </td>
+                                <td>
+                                    <p class="led-red"></p>
+                                </td>
+                                <td>
+                                    <p class="led-red"></p>
+                                </td>
+                                <td>
+                                    <p class="led-red"></p>
+                                </td>
+                                <td>
+                                    <p class="led-red"></p>
+                                </td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
         ';
 
     }
-
-
-
 
 }
 
