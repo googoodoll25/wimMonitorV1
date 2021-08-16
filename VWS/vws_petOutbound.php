@@ -1,7 +1,7 @@
 <?php
 $ip = "49.229.158.23";
 try{
-    $exe= shell_exec("ping -n 1 $ip");
+    $exe= shell_exec("ping -n 2 $ip");
 }catch (Exception $e){
     echo $e->getMessage();
 }
