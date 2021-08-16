@@ -12,7 +12,7 @@ if(strrpos($exe, "100% loss") > 0){
            <div class="row">
                    <div class="col-md-12">
             <!--========================================================-->
-                   บรรพตพิสัย <code><b>OFFLINE</b></code>
+                   บรรพตพิสัย <code><b>INTERNET OFFLINE</b></code>
                    </div>
                    
                </div>
@@ -110,7 +110,7 @@ if(strrpos($exe, "100% loss") > 0){
         $connection->exec("set names utf8");
         $_SESSION['db_result'] = 'Connect';
         // echo "Connect";
-
+// =================== ARM WIM =================
         $sql_Lane1  = "select top 1 wTime,wDate from [dbo].[tbt_1_WimSensor_IND9W] WHERE Lane = 1 ORDER BY WimSensor_ID Desc";
         $stmt_Lane1 = $connection->query($sql_Lane1);
         $rowWim1 = $stmt_Lane1->fetch(PDO::FETCH_ASSOC);
@@ -192,9 +192,9 @@ if(strrpos($exe, "100% loss") > 0){
                                    <th>Over2</th>
                                    <th>LPR1</th>
                                    <th>LPR2</th>
-                                   <th>Relay1</th>
-                                   <th>Relay2</th>
-                                   <th>Relay3</th>
+                                   <th width="8%">Relay1</th>
+                                   <th width="8%">Relay2</th>
+                                   <th width="8%">Relay3</th>
                                </tr>
                            </thead>
                            <tbody>
@@ -265,7 +265,7 @@ if(strrpos($exe, "100% loss") > 0){
                <div class="row">
                        <div class="col-md-12">
                 <!--========================================================-->
-                       บรรพตพิสัย <code><b>OFFLINE</b></code>
+                       บรรพตพิสัย <code><b>Database Disconnect</b></code>
                        </div>
                        
                    </div>

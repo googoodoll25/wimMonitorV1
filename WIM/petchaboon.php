@@ -12,7 +12,7 @@ if(strrpos($exe, "100% loss") > 0){
            <div class="row">
                    <div class="col-md-12">
             <!--========================================================-->
-                   เพชรบูรณ์ <code><b>OFFLINE</b></code>
+                   เพชรบูรณ์ <code><b>INTERNET OFFLINE</b></code>
                    </div>
                    
                </div>
@@ -191,9 +191,9 @@ if(strrpos($exe, "100% loss") > 0){
                                    <th>Over2</th>
                                    <th>LPR1</th>
                                    <th>LPR2</th>
-                                   <th>Relay1</th>
-                                   <th>Relay2</th>
-                                   <th>Relay3</th>
+                                   <th width="8%">Relay1</th>
+                                   <th width="8%">Relay2</th>
+                                   <th width="8%">Relay3</th>
                                </tr>
                            </thead>
                            <tbody>
@@ -262,7 +262,7 @@ if(strrpos($exe, "100% loss") > 0){
                <div class="row">
                        <div class="col-md-12">
                 <!--========================================================-->
-                       เพชรบูรณ์ <code><b>OFFLINE</b></code>
+                       เพชรบูรณ์ <code><b>Database Disconnect</b></code>
                        </div>
                        
                    </div>

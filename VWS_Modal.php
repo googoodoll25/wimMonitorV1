@@ -104,7 +104,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel" style="color:black">เพชรบูรณ์ (ขาเข้า)</h5>
+        <h5 class="modal-title" id="exampleModalLabel" style="color:black">เพชรบูรณ์ (ขาออก)</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -129,7 +129,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel" style="color:black"><b>เพชรบูรณ์ (ขาเข้า)</b></h5>
+        <h5 class="modal-title" id="exampleModalLabel" style="color:black"><b>เพชรบูรณ์ (ขาออก)</b></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

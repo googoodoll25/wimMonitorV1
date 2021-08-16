@@ -1,5 +1,5 @@
 <?php
-$ip = "110.77.134.65";
+$ip = "103.10.231.148";
 try{
     $exe= shell_exec("ping -n 1 $ip");
 }catch (Exception $e){
@@ -12,7 +12,7 @@ if(strrpos($exe, "100% loss") > 0){
            <div class="row">
                    <div class="col-md-12">
             <!--========================================================-->
-            <small>VWS</small> ท่าแซะ  <code><b>INTERNET OFFLINE</b></code>
+            <small>VWS</small> เพชรบูรณ์ (น้ำหนาว) <code><b>INTERNET OFFLINE</b></code>
                    </div>
                    
                </div>
@@ -84,7 +84,7 @@ if(strrpos($exe, "100% loss") > 0){
                                        <p class="led-red"></p>
                                    </td>
                                    <td>
-                                   <p class="led-red"></p>
+                                   
                                    </td>
                                </tr>
                            </tbody>
@@ -98,7 +98,7 @@ if(strrpos($exe, "100% loss") > 0){
 }else{
     //===========================================================================
     try{
-        $serverName = '110.77.134.65';
+        $serverName = '103.10.231.148';
         $dbName     = 'db_wim';
         $userName       = 'mettler';
         $userPassword   = 'p@ssw0rd';
@@ -164,10 +164,10 @@ if(strrpos($exe, "100% loss") > 0){
            <div class="row" style="margin-top:-10px;">
                    <div class="col-md-12">
             <!--========================================================-->
-                 <a style="color:#FFF" href="http://110.77.134.65:8080/vws"  target="_blank">  
-                 <small>VWS</small> ท่าแซะ 
+                 <a style="color:#FFF" href="http://103.10.231.148:8080/vws"  target="_blank">  
+                 <small>VWS</small> เพชรบูรณ์ (น้ำหนาว)
                  </a>
-                 <code><b>Anydesk ID : 345090686 </b></code>
+                 <code><b>Anydesk ID : 390850979 </b></code>
             <!--========================================================-->
             
                 </div>
@@ -241,8 +241,7 @@ if(strrpos($exe, "100% loss") > 0){
                                        <button class="btn btn-success btn-sm btn-block button_relay" data-toggle="modal" data-target="#relay_thasae_vws2" style="'.$display2.'">Reset</button>
                                    </td>
                                    <td>
-                                       <p class="led-'.$relay3.'"></p>
-                                       <button class="btn btn-success btn-sm btn-block button_relay" data-toggle="modal" data-target="#relay_thasae_vws3" style="'.$display2.'">Reset</button>
+                                      
                                    </td>
                                </tr>
                            </tbody>
@@ -263,7 +262,7 @@ if(strrpos($exe, "100% loss") > 0){
                <div class="row">
                        <div class="col-md-12">
                 <!--========================================================-->
-                <small>VWS</small> ท่าแซะ <code><b>Database Disconnect</b></code>
+                <small>VWS</small> เพชรบูรณ์ (น้ำหนาว) <code><b>Database Disconnect</b></code>
                        </div>
                        
                    </div>
@@ -335,7 +334,7 @@ if(strrpos($exe, "100% loss") > 0){
                                            <p class="led-red"></p>
                                        </td>
                                        <td>
-                                        <p class="led-red"></p>
+                                        
                                        </td>
                                    </tr>
                                </tbody>

@@ -6,6 +6,9 @@ include('Header.php');
     <h3>VWS</h3>
 
     <div id="thasae"></div>
+    <div id="pet_outbound"></div>
+    <div id="pet_inbound"></div>
+    <div id="namnao"></div>
    
        
 </div>
@@ -23,8 +26,10 @@ include('Header.php');
 <script type="text/javascript">
     $(document).ready(function(){    
         
-        thasae();
-        
+        thasae();  
+        pet_outbound();
+        pet_inbound();
+        namnao();
     });
     
     function thasae(){
@@ -32,6 +37,22 @@ include('Header.php');
            setTimeout(thasae, 5000);
         });
     }
+    function pet_outbound(){
+        $('#pet_outbound').load('VWS/vws_petOutbound.php', function(){
+           setTimeout(pet_outbound, 5000);
+        });
+    }
+    function pet_inbound(){
+        $('#pet_inbound').load('VWS/vws_petInbound.php', function(){
+           setTimeout(pet_inbound, 5000);
+        });
+    }
+    function namnao(){
+        $('#namnao').load('VWS/vws_namnao.php', function(){
+           setTimeout(namnao, 5000);
+        });
+    }
+    
  
 </script>
 <script type="text/javascript">
